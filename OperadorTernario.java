@@ -2,41 +2,38 @@ import java.util.Scanner;
 
 public class OperadorTernario {
     public static void main(String[] args) {
-
-        //variable = condicion ? si es verdadero: si es falso;
-        String variable = 7 == 7 ? "si es verdadero" : "si es falso" ;
-        System.out.println(variable);
-
+        
+        String variable = 7 == 5 ? "si es verdadero" : "si es falso";
+        System.out.println("variable = " + variable);
+        
         String estado = "";
-        double promedio = 6.2;
+        double promedio = 0.0;
 
         double matematicas = 0.0;
-        double ciencia = 0.0;
+        double ciencias = 0.0;
         double historia = 0.0;
 
-        Scanner sc = new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
 
-        System.out.println("Ingrese la nota de matematicas: ");
-        matematicas = sc.nextDouble();
+        System.out.println("Ingrese la nota de matemáticas entre 2.0 - 7.0:");
+        matematicas = s.nextDouble();
 
-        System.out.println("Ingrese la nota de ciencia: ");
-        ciencia = sc.nextDouble();
+        System.out.println("Ingrese la nota de ciencias entre 2.0 - 7.0:");
+        ciencias = s.nextDouble();
 
-        System.out.println("Ingrese la nota de historia: ");
-        historia = sc.nextDouble();
+        System.out.println("Ingrese la nota de historia entre 2.0 - 7.0:");
+        historia = s.nextDouble();
 
-        promedio = (matematicas + ciencia + historia)/3;
-        System.out.println(promedio);
+        promedio = (matematicas + ciencias + historia) / 3;
+        System.out.println("promedio = " + promedio);
 
-        estado = promedio >= 5.49 ? "aprobado" : "rechazado" ;
+        estado = promedio >= 5.49 ? "Aprobado": "Rechazado";
+        System.out.println("estado = " + estado);
 
-        System.out.println(estado);
-
-        /*if (promedio >= 5.49){
-            estado = "aprobado";
-        }else {
-            estado = "rechazado";
+       /* if(promedio >= 5.49){
+            estado = "Aprobado";
+        } else {
+            estado = "Rechazado";
         }*/
-
     }
 }
